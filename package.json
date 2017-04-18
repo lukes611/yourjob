@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/lukes611/yourjob/issues"
   },
-  "homepage": "https://github.com/lukes611/yourjob#readme"
+  "homepage": "https://github.com/lukes611/yourjob#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
 }
