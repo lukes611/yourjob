@@ -1,0 +1,19 @@
+{
+  "name": "yourjob",
+  "version": "1.0.0",
+  "description": "yourjob-site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukes611/yourjob.git"
+  },
+  "author": "luke lincoln",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukes611/yourjob/issues"
+  },
+  "homepage": "https://github.com/lukes611/yourjob#readme"
+}
