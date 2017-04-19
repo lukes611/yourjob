@@ -1,24 +1,29 @@
 import React from 'react';
-import MenuToggler from './MenuToggler.jsx';
-import SearchBar from './SearchBar.jsx';
+import TopBarDesktop from './TopBarDesktop.jsx';
+import TopBarMobile from './TopBarMobile.jsx';
 
-class TopBar extends React.Component{
+export default class TopBar extends React.Component{
+
+  constructor(props){
+    super(props);
+    this.state = {
+      entry : '',
+      suggestions : []
+    };
+  }
+
   render(){
     return (
-      <div className="top-bar">
-        <div className="top-bar-1">
-          <MenuToggler/>
-          <button className="top-bar-your-job-button">
-            your-job
-          </button>
-        </div>
-        <SearchBar/>
-        <div className="top-bar-3">
-          <button className="top-bar-sign-in-button" >sign-in</button>
-        </div>
+      <div>
+        <TopBarDesktop entry={this.state.entry} update={this.updateEntry.bind(this)} suggestions={this.state.suggestions} />
+        <TopBarMobile  entry={this.state.entry} update={this.updateEntry.bind(this)}  suggestions={this.state.suggestions} />
       </div>
-  );
+    );
+  }
+
+  updateEntry(newString){
+    let newSuggestions = newString.length == 0 ? [] : ['duck doctor', 'triangle inspector', 'tv executive', 'inspector gadget'];
+    newSuggestions.sort(() => Math.random()-0.5);
+    this.setState({entry : newString, suggestions : newSuggestions});
   }
 }
-
-export default TopBar;

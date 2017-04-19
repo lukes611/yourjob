@@ -4,18 +4,18 @@ class SearchBar extends React.Component{
 
   constructor(props){
     super(props);
-    this.state = {entry : ''};
   }
 
   render(){
 
-    let drawGuesses = this.state.entry.length > 0;
-    let guesses = 'hello,tonka,blue,bird'.split(',');
+
+    let guesses = this.props.suggestions;
+    let drawGuesses = guesses.length > 0;
 
     return (
       <div className="top-bar-2">
         <div className="top-bar-2-sub">
-          <input type="text" className="top-bar-search-bar" placeholder="Search..." onChange={this.updateEntry.bind(this)}></input>
+          <input type="text" className="top-bar-search-bar" value={this.props.entry} placeholder="Search" onChange={this.updateEntry.bind(this)}></input>
           <button className="top-bar-search-button">
             <img src="ims/search-icon.png"></img>
           </button>
@@ -29,7 +29,7 @@ class SearchBar extends React.Component{
 
   updateEntry(e){
     let value = e.target.value;
-    this.setState({entry : value});
+    this.props.update(value);
   }
 
 }
