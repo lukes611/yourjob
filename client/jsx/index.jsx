@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import TopBar from './top-bar/TopBar.jsx';
+import TopBarMobile from './top-bar/TopBarMobile.jsx';
 
 /*
 implement:
@@ -16,6 +17,7 @@ class App extends React.Component{
     return (
       <div>
         <TopBar/>
+        <TopBarMobile/>
         your job app - body
       </div>
     );
