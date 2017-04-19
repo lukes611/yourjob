@@ -22,8 +22,14 @@ export default class TopBar extends React.Component{
   }
 
   updateEntry(newString){
-    let newSuggestions = newString.length == 0 ? [] : ['duck doctor', 'triangle inspector', 'tv executive', 'inspector gadget'];
-    newSuggestions.sort(() => Math.random()-0.5);
-    this.setState({entry : newString, suggestions : newSuggestions});
+    if(newString.length > 0){
+      $.get('/occupations', (data) =>{
+        let occupationList = data.occupations;
+        this.setState({
+          entry : newString,
+          suggestions : occupationList.filter(job => job.toLowerCase().includes(newString))
+        });
+      });
+    }else this.setState({entry : newString, suggestions : []});
   }
 }
