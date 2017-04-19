@@ -17,7 +17,7 @@ class SearchBar extends React.Component{
         <div className="top-bar-2-sub">
           <input type="text" className="top-bar-search-bar" placeholder="Search..." onChange={this.updateEntry.bind(this)}></input>
           <button className="top-bar-search-button">
-            {/*<img src="ims/search-icon.png"></img>*/}
+            <img src="ims/search-icon.png"></img>
           </button>
           <div className="top-bar-search-guess" style={{display : drawGuesses ? 'block' : 'none'}}>
             {guesses.map((g,i) => <div key={i}>{g}</div>)}
