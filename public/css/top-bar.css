@@ -54,8 +54,8 @@
   margin-top : 12px;
 }
 .top-bar-search-bar{
-  background-color : rgb(44,62,80);
   border : 1px solid rgb(189,195,199);
+  background-color : rgb(44,62,80);
   color : rgb(52,152,219);
   font-size : 20px;
   height : 24px;
@@ -101,12 +101,10 @@
   }
   .top-bar-mobile{
     display : block;
-    height : 90px;
     background-color : rgb(31, 45, 58);
   }
   .top-bar-mobile-links-div{
     width : 100%;
-    height : 50px;
     display : table;
   }
   .top-bar-mobile-links{
@@ -117,5 +115,34 @@
     border-bottom : 1px solid rgb(52,152,219);
     text-align : center;
     padding-top : 15px;
+    padding-bottom : 5px;
+  }
+  .top-bar-mobile-search-bar{
+    width : 100%;
+    height : 37px;
+
+  }
+  .top-bar-mobile-search-bar-input{
+    width : calc(79% - 20px);
+    height : 32px;
+    font-size : 22px;
+    float : left;
+    border : 1px solid rgb(189,195,199);
+    border-right : none;
+    background-color : rgb(44,62,80);
+    color : rgb(52,152,219);
+    padding-left : 20px;
+
+  }
+  .top-bar-mobile-search-bar-button{
+    width : 20.5%;
+    height : 36px;
+    border : 1px solid rgb(189,195,199);
+    background-color : rgb(44,62,80);
+  }
+
+  .top-bar-mobile-search-bar-button img{
+    width : 15px;
+    height : 15px;
   }
 }

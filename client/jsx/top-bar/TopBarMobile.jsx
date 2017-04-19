@@ -3,7 +3,12 @@ import React from 'react';
 class SearchBar extends React.Component{
   render(){
     return (
-      <input />
+      <div className="top-bar-mobile-search-bar">
+        <input className="top-bar-mobile-search-bar-input" placeholder="Search" />
+        <button className="top-bar-mobile-search-bar-button">
+          <img src="ims/search-icon.png"></img>
+        </button>
+        </div>
     );
   }
 }
