@@ -7,25 +7,26 @@
   left : 0px;
   width : 100vw;
   height : 55px;
-  display : table;
 }
 
 .top-bar-1{
-  display : table-cell;
-  width : 200px;
+  width : 150px;
   height : 100%;
+  display : inline-block;
+  float : left;
 }
 
 .top-bar-2{
-  width : auto;
+  width : calc(100% - (150px + 65px));
   height : 100%;
-  display : table-cell;
+  float : left;
+  display : inline-block;
 }
 
 .top-bar-3{
   width : 65px;
-  display : table-cell;
   height : 100%;
+  float : left;
 }
 
 .top-bar-menu-button{
@@ -49,9 +50,10 @@
 }
 
 .top-bar-2-sub{
-  width : 100%;
+  width : 80%;
   height : 38px;
   margin-top : 12px;
+  margin-left : 10%;
 }
 .top-bar-search-bar{
   border : 1px solid rgb(189,195,199);
@@ -59,7 +61,7 @@
   color : rgb(52,152,219);
   font-size : 20px;
   height : 24px;
-  width : 60%;
+  width : 75%;
   float : left;
 }
 
@@ -89,6 +91,7 @@
   border : 1px solid rgb(52,152,219);
   color : rgb(52,152,219);
   padding : 5px;
+  margin-top : 15px;
 }
 
 .top-bar-mobile{
