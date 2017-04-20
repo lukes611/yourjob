@@ -17,14 +17,14 @@
 }
 
 .top-bar-2{
-  width : calc(100% - (150px + 65px));
+  width : calc(100% - (150px + 120px));
   height : 100%;
   float : left;
   display : inline-block;
 }
 
 .top-bar-3{
-  width : 65px;
+  width : 120px;
   height : 100%;
   float : left;
 }
@@ -34,7 +34,6 @@
   border : 1px solid rgb(52,152,219);
   color : rgb(52,152,219);
   margin-top : 15px;
-  margin-left : 5px;
 }
 
 .top-bar-your-job-button{
@@ -61,7 +60,7 @@
   color : rgb(52,152,219);
   font-size : 20px;
   height : 24px;
-  width : 75%;
+  width : 72%;
   float : left;
 }
 

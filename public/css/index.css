@@ -7,18 +7,37 @@ body{
 .app-body{
   background-color : red;
   width : 100%;
-  height : 400px;
-  margin-top : 45px;
+  margin-top : 38px;
 }
 
 .app-body-menu{
   background-color : green;
-  float : left;
-  width : 180px;
-  height : 100%;
+  position : fixed;
+  top : 55px;
+  left : 0px;
+  width : 150px;
+  height : calc(100vh - 55px);
+
 }
 
 
 .app-body-contents{
   background-color : orange;
+  width : 70%;
+  margin-left : 15%;
+  display : inline-block;
+}
+
+.app-body-video{
+  background-color : pink;
+  width:178px;
+  height:178px;
+  border : 1px solid black;
+  float : left;
+}
+
+.app-body-title{
+  background-color : purple;
+  width : 100%;
+  display : inline-block;
 }
