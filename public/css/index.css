@@ -22,8 +22,8 @@ body{
 
 .app-body-contents{
   background-color : rgb(31, 45, 58);
-  width : 70%;
-  margin-left : 15%;
+  width : 800px;
+  margin-left : calc((100% - 800px) / 2);
   display : inline-block;
 }
 
@@ -73,4 +73,46 @@ body{
   margin-bottom : 10px;
   border-bottom : 1px solid rgb(52,152,219);
   padding-left : 20px;
+}
+
+
+
+@media (max-width: 850px){
+  .app-body-contents{
+    width : 600px;
+    margin-left : calc((100% - 600px) / 2);
+  }
+}
+
+/*for mobile*/
+@media (max-width: 600px){
+  .app-body-contents{
+    width : 100%;
+    margin-left : 0px;
+
+  }
+  .app-body{
+    margin-top : 2px;
+  }
+  .app-body-video{
+    width:90%;
+    height:88%;
+    padding : 5%;
+    float : left;
+  }
+
+
+  .app-body-video-info-title{
+    font-size : 28px;
+  }
+
+  .app-body-video-info-other{
+    font-size : 24px;
+  }
+
+  .app-body-video-info-other a{
+    padding-bottom : 10px;
+  }
+
+
 }
