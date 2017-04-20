@@ -5,9 +5,8 @@ body{
 }
 
 .app-body{
-  background-color : red;
   width : 100%;
-  margin-top : 38px;
+  margin-top : 60px;
 }
 
 .app-body-menu{
@@ -17,27 +16,61 @@ body{
   left : 0px;
   width : 150px;
   height : calc(100vh - 55px);
-
+  display : none;
 }
 
 
 .app-body-contents{
-  background-color : orange;
+  background-color : rgb(31, 45, 58);
   width : 70%;
   margin-left : 15%;
   display : inline-block;
 }
 
 .app-body-video{
-  background-color : pink;
-  width:178px;
-  height:178px;
-  border : 1px solid black;
+  width:180px;
+  height:160px;
+  padding : 10px;
   float : left;
 }
 
-.app-body-title{
-  background-color : purple;
+.app-body-video img{
   width : 100%;
+  height : auto;
+}
+
+.app-body-video-info{
+  width : 100%;
+  height : 60px;
+}
+
+.app-body-video-info-title{
+  font-family : Ubuntu;
+  color : rgb(52,152,219);
+  font-size : 16px;
+}
+
+.app-body-video-info-other{
+  font-family : Ubuntu;
+  color : rgb(189,195,199);
+  font-size : 14px;
+}
+
+.app-body-video-info-other a{
+  color : rgb(189,195,199);
+  padding-bottom : 2px;
+}
+
+
+.app-body-title{
+  width : calc(100% - 20px);
+  color : rgb(52,152,219);
   display : inline-block;
+  font-family : Ubuntu;
+  font-size : 26px;
+  padding-top : 10px;
+  padding-bottom : 10px;
+  margin-bottom : 10px;
+  border-bottom : 1px solid rgb(52,152,219);
+  padding-left : 20px;
 }
