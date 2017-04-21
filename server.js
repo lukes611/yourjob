@@ -1,3 +1,4 @@
+//server by luke lincoln
 
 var express = require('express');
 var occupations = require('./dataAtServer/res/occupations.json');
