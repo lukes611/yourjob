@@ -14,6 +14,7 @@ body{
   width : 220px;
   padding-top : 20px;
   height : calc(100vh - 55px);
+  display : none;
 }
 
 .desktop-menu-item{

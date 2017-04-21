@@ -3,7 +3,6 @@ yourjob-site
 
 Todo:
 
-1. menu-design
 2. different-pages
 3. hook-up search
 4. add-db
@@ -11,4 +10,3 @@ Todo:
   companies
   profiles
   uploads
-  
