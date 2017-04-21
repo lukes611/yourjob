@@ -4,115 +4,25 @@ body{
   background-color : rgb(189,195,199);
 }
 
-.app-body{
-  width : 100%;
-  margin-top : 60px;
-}
-
 .app-body-menu{
-  background-color : green;
+  border-top : 1px solid rgb(52,152,219);
+  border-right : 1px solid rgb(52,152,219);
+  background-color : rgb(31, 45, 58);
   position : fixed;
   top : 55px;
   left : 0px;
-  width : 150px;
+  width : 220px;
+  padding-top : 20px;
   height : calc(100vh - 55px);
-  display : none;
 }
 
-
-.app-body-contents{
-  background-color : rgb(31, 45, 58);
-  width : 800px;
-  margin-left : calc((100% - 800px) / 2);
-  display : inline-block;
-}
-
-.app-body-video{
-  width:180px;
-  height:160px;
-  padding : 10px;
-  float : left;
-}
-
-.app-body-video img{
-  width : 100%;
-  height : auto;
-}
-
-.app-body-video-info{
-  width : 100%;
-  height : 60px;
-}
-
-.app-body-video-info-title{
-  font-family : Ubuntu;
+.desktop-menu-item{
   color : rgb(52,152,219);
-  font-size : 16px;
-}
-
-.app-body-video-info-other{
-  font-family : Ubuntu;
-  color : rgb(189,195,199);
-  font-size : 14px;
-}
-
-.app-body-video-info-other a{
-  color : rgb(189,195,199);
-  padding-bottom : 2px;
-}
-
-
-.app-body-title{
-  width : calc(100% - 20px);
-  color : rgb(52,152,219);
-  display : inline-block;
+  width : calc(0.8 * 220px - 20px);
+  margin-left : calc(0.1 * 220px);
   font-family : Ubuntu;
   font-size : 26px;
-  padding-top : 10px;
-  padding-bottom : 10px;
-  margin-bottom : 10px;
-  border-bottom : 1px solid rgb(52,152,219);
+  padding-top : 5px;
+  padding-bottom : 5px;
   padding-left : 20px;
-}
-
-
-
-@media (max-width: 850px){
-  .app-body-contents{
-    width : 600px;
-    margin-left : calc((100% - 600px) / 2);
-  }
-}
-
-/*for mobile*/
-@media (max-width: 600px){
-  .app-body-contents{
-    width : 100%;
-    margin-left : 0px;
-
-  }
-  .app-body{
-    margin-top : 2px;
-  }
-  .app-body-video{
-    width:90%;
-    height:88%;
-    padding : 5%;
-    float : left;
-  }
-
-
-  .app-body-video-info-title{
-    font-size : 28px;
-  }
-
-  .app-body-video-info-other{
-    font-size : 24px;
-  }
-
-  .app-body-video-info-other a{
-    padding-bottom : 10px;
-  }
-
-
 }
