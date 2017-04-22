@@ -27,9 +27,12 @@ export default class TopBar extends React.Component{
     };
     return (
       <div>
-        <TopBarDesktop toggleMenu={this.toggleMenu.bind(this)}/>
+        <TopBarDesktop toggleMenu={this.toggleMenu.bind(this)} search={this.doSearch.bind(this)}/>
         <div className="app-body-menu" style={menuStyle}>
             <div className="desktop-menu-item">Home</div>
+            <div className="desktop-menu-item">About</div>
+            <div className="desktop-menu-item">Jobs</div>
+            <div className="desktop-menu-item">Contact Us</div>
         </div>
       </div>
     );
@@ -37,6 +40,10 @@ export default class TopBar extends React.Component{
 
   toggleMenu(){
     this.setState({displayMenu : !this.state.displayMenu});
+  }
+
+  doSearch(text){
+    console.log('searching for ', text, 'videos');
   }
 
   /*updateEntry(newString){

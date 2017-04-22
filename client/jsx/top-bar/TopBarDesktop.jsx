@@ -14,7 +14,7 @@ class TopBarDesktop extends React.Component{
           </button>
         </div>
         <MobileLaunchBar/>
-        <SearchBar/>
+        <SearchBar search={this.props.search} />
         <div className="top-bar-3">
           <button className="top-bar-sign-in-button" >sign-in</button>
         </div>

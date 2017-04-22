@@ -101,6 +101,18 @@
   margin-top : 15px;
 }
 
+.top-bar-search-guess-item{
+  padding-top : 3px;
+  padding-bottom : 3px;
+  cursor : pointer;
+}
+
+.top-bar-search-guess-item:hover{
+  background-color : rgb(52,152,219);
+  color : rgb(31, 45, 58);
+
+}
+
 
 .top-bar-mobile-links-div{ display : none; }
 
