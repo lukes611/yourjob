@@ -13,7 +13,7 @@ class TopBarDesktop extends React.Component{
             your-job
           </button>
         </div>
-        <MobileLaunchBar/>
+        <MobileLaunchBar changeDisplay={this.props.changeDisplay} selectedMenuItem={this.props.selectedMenuItem} />
         <SearchBar search={this.props.search} />
         <div className="top-bar-3">
           <button className="top-bar-sign-in-button" >sign-in</button>

@@ -4,15 +4,10 @@ import MenuItem from './MenuItem.jsx';
 /*
 TopBar handles:
 
-search (hits enter or clicks button)
-go-to site
+search (hits enter or clicks button) [done]
+go-to site []
 change display
-toggling menu
-
-<div className="desktop-menu-item">Home</div>
-<div className="desktop-menu-item">About</div>
-<div className="desktop-menu-item">Jobs</div>
-<div className="desktop-menu-item">Contact Us</div>
+toggling menu [done]
 
 */
 
@@ -29,16 +24,21 @@ export default class TopBar extends React.Component{
     let menuStyle = {
       display : this.state.displayMenu ? 'block' : 'none'
     };
-    let menuList = 'Home,About us,Your Profile,Jobs,Companies,Contact us'.split(',');
+    let menuList = 'Home,Info,Contact Us'.split(',');
 
     return (
       <div>
-        <TopBarDesktop toggleMenu={this.toggleMenu.bind(this)} search={this.doSearch.bind(this)}/>
+        <TopBarDesktop changeDisplay={this.props.changeDisplay} selectedMenuItem={this.props.selectedMenuItem} toggleMenu={this.toggleMenu.bind(this)} search={this.doSearch.bind(this)}/>
         <div className="app-body-menu" style={menuStyle}>
-            {menuList.map((name,i) => <MenuItem key={i} text={name} changeDisplay={this.props.changeDisplay} selectedMenuItem={this.props.selectedMenuItem}/>)}
+            {menuList.map((name,i) => <MenuItem key={i} text={name} changeDisplay={this.changeDisplay.bind(this)} selectedMenuItem={this.props.selectedMenuItem}/>)}
         </div>
       </div>
     );
+  }
+
+  changeDisplay(name){
+    this.props.changeDisplay(name);
+    this.toggleMenu();
   }
 
   toggleMenu(){
