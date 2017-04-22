@@ -46,15 +46,6 @@ export default class TopBar extends React.Component{
     console.log('searching for ', text, 'videos');
   }
 
-  /*updateEntry(newString){
-    if(newString.length > 0){
-      $.get('/occupations', (data) =>{
-        let occupationList = data.occupations;
-        this.setState({
-          entry : newString,
-          suggestions : occupationList.filter(job => job.toLowerCase().includes(newString))
-        });
-      });
-    }else this.setState({entry : newString, suggestions : []});
-  }*/
+  
+
 }

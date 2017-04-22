@@ -75,6 +75,7 @@
 .top-bar-search-button{
   background-color : rgb(44,62,80);
   height : 28px;
+  cursor : pointer;
   width : 70px;
   border : 1px solid rgb(189,195,199);
 }
