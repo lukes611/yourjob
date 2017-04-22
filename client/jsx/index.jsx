@@ -24,7 +24,7 @@ class App extends React.Component{
     return (
       <div>
         <TopBar changeDisplay={this.changeDisplay.bind(this)} selectedMenuItem={this.state.pageDisplay}/>
-        <AppBody/>
+        <AppBody page={this.state.pageDisplay}/>
       </div>
     );
   }

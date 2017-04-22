@@ -27,7 +27,8 @@ export default class AppBody extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      videos : []
+      videos : [],
+      data : ''
     };
   }
 
@@ -38,10 +39,11 @@ export default class AppBody extends React.Component{
   }
 
   render(){
+
     return (
       <div className="app-body">
         <div className="app-body-contents">
-          <div className="app-body-title">about us</div>
+          <div className="app-body-title">{this.props.page}</div>
           <div className="app-body-block">
           <div className="app-body-para">
 
