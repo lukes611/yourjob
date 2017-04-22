@@ -1,27 +1,45 @@
 import React from 'react';
 import TopBarDesktop from './TopBarDesktop.jsx';
-import TopBarMobile from './TopBarMobile.jsx';
+
+/*
+TopBar handles:
+
+search (hits enter or clicks button)
+go-to site
+change display
+toggling menu
+
+
+*/
 
 export default class TopBar extends React.Component{
 
   constructor(props){
     super(props);
     this.state = {
-      entry : '',
-      suggestions : []
+      displayMenu : false
     };
   }
 
   render(){
+    let menuStyle = {
+      display : this.state.displayMenu ? 'block' : 'none'
+    };
     return (
       <div>
-        <TopBarDesktop entry={this.state.entry} update={this.updateEntry.bind(this)} suggestions={this.state.suggestions} />
+        <TopBarDesktop toggleMenu={this.toggleMenu.bind(this)}/>
+        <div className="app-body-menu" style={menuStyle}>
+            <div className="desktop-menu-item">Home</div>
+        </div>
       </div>
     );
-    //<TopBarMobile  entry={this.state.entry} update={this.updateEntry.bind(this)}  suggestions={this.state.suggestions} />
   }
 
-  updateEntry(newString){
+  toggleMenu(){
+    this.setState({displayMenu : !this.state.displayMenu});
+  }
+
+  /*updateEntry(newString){
     if(newString.length > 0){
       $.get('/occupations', (data) =>{
         let occupationList = data.occupations;
@@ -31,5 +49,5 @@ export default class TopBar extends React.Component{
         });
       });
     }else this.setState({entry : newString, suggestions : []});
-  }
+  }*/
 }

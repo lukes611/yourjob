@@ -9,13 +9,13 @@ class SearchBar extends React.Component{
   render(){
 
 
-    let guesses = this.props.suggestions;
-    let drawGuesses = guesses.length > 0;
+    let guesses = [];
+    let drawGuesses = false;
 
     return (
       <div className="top-bar-2">
         <div className="top-bar-2-sub">
-          <input type="text" className="top-bar-search-bar" value={this.props.entry} placeholder="Search" onChange={this.updateEntry.bind(this)}></input>
+          <input type="text" className="top-bar-search-bar" placeholder="Search" onChange={this.updateEntry.bind(this)}></input>
           <button className="top-bar-search-button">
             <img src="ims/search-icon.png"></img>
           </button>
@@ -29,7 +29,8 @@ class SearchBar extends React.Component{
 
   updateEntry(e){
     let value = e.target.value;
-    this.props.update(value);
+    console.log('entering...', value);
+    //this.props.update(value);
   }
 
 }

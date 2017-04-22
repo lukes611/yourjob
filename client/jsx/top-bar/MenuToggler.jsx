@@ -2,13 +2,9 @@ import React from 'react';
 
 class MenuToggler extends React.Component{
   render(){
-    return (<button className="top-bar-menu-button" onClick={this.toggleMenuBar.bind(this)}>
+    return (<button className="top-bar-menu-button" onClick={this.props.toggleMenu}>
       menu
     </button>);
-  }
-
-  toggleMenuBar(){
-    $($('.app-body-menu')[0]).toggle();
   }
 }
 

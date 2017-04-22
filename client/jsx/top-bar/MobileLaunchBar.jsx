@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class TopBarMobile extends React.Component{
+export default class MobileLaunchBar extends React.Component{
 
   render(){
     return (
