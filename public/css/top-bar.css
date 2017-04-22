@@ -80,8 +80,8 @@
 }
 
 .top-bar-search-guess{
-  background-color : rgb(44,62,80);
-  width : 60%;
+  background-color : rgb(31, 45, 58);
+  width : 72%;
   display : none;
 
 }
@@ -149,11 +149,10 @@
     background-color : rgb(31, 45, 58);
   }
 
+
   .top-bar-search-guess{
-    background-color : rgb(31, 45, 58);
-    width : 60%;
+    width : 100%;
     display : none;
-    height : 30%;
   }
 
 
