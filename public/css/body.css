@@ -75,13 +75,16 @@
 
 /*for mobile*/
 @media (max-width: 600px){
+
+  .app-body{
+    margin-top : 0px;
+    background-color : rgb(31, 45, 58);
+  }
+
   .app-body-contents{
     width : 100%;
     margin-left : 0px;
 
-  }
-  .app-body{
-    margin-top : 2px;
   }
   .app-body-video{
     width:90%;

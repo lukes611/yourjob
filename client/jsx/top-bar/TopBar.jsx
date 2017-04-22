@@ -16,9 +16,10 @@ export default class TopBar extends React.Component{
     return (
       <div>
         <TopBarDesktop entry={this.state.entry} update={this.updateEntry.bind(this)} suggestions={this.state.suggestions} />
-        <TopBarMobile  entry={this.state.entry} update={this.updateEntry.bind(this)}  suggestions={this.state.suggestions} />
+
       </div>
     );
+    //<TopBarMobile  entry={this.state.entry} update={this.updateEntry.bind(this)}  suggestions={this.state.suggestions} />
   }
 
   updateEntry(newString){
