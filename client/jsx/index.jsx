@@ -13,13 +13,24 @@ implement:
 */
 
 class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      pageDisplay : 'Home'
+    };
+  }
+
   render(){
     return (
       <div>
-        <TopBar/>
+        <TopBar changeDisplay={this.changeDisplay.bind(this)} selectedMenuItem={this.state.pageDisplay}/>
         <AppBody/>
       </div>
     );
+  }
+
+  changeDisplay(type){
+    this.setState(Object.assign({}, this.state, {pageDisplay : type}));
   }
 }
 
