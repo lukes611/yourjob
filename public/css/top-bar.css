@@ -2,7 +2,6 @@
   background-color : rgb(31, 45, 58);
   color : rgb(52,152,219);
   font-family :Ubuntu;
-  position : fixed;
   top : 0px;
   left : 0px;
   width : 100vw;
@@ -241,34 +240,81 @@
   .top-bar{
     width : 100%;
     height : auto;
-    position : static;
     display : inline-block;
     border-bottom : none;
+    margin : 0px;
+    background-color : rgb(41,128,185);
   }
 
   .top-bar-2{
     width : 100%;
     height : auto;
+    float : none;
     clear : both;
+    display : inline-block;
+    background-color : rgb(41,128,185);
+    margin : 0px;
+  }
+
+  .top-bar-2-sub{
+    width : 100%;
+    height : auto;
+    margin : 0px;
     display : block;
+    float : none;
+    clear : both;
+
+  }
+
+  .job-title-search-area{
+    width : 100%;
+    height : auto;
+    float : none;
+    clear : both;
+
+  }
+
+  .job-location-search-area{
+    width : 100%;
+    height : auto;
+    float : none;
+    clear : both;
+  }
+
+  .job-search-button-container{
+    clear : both;
+    float : none;
+    width : 100%;
+    height : auto;
+  }
+
+  .job-location-search-area-label{
+    margin-top : 20px;
+    margin-left : 5%;
+    font-size : 20px;
+    margin-bottom : 6px;
+    font-family : Ubuntu;
+    color : rgb(236,240,241);
   }
 
 
   .top-bar-search-bar{
     font-size : 32px;
     height : 40px;
-    width : 75%;
-    float : left;
+    margin-left : 5%;
+    width : 85%;
+    float : none;
+    clear : both;
     border-left : none;
-    background-color : rgb(31, 45, 58);
   }
 
   .top-bar-search-button{
     height : 44px;
-    width : 24.5%;
+    margin-left : 68%;
+    width : 25.0%;
     border-right : none;
     border-left : none;
-    background-color : rgb(31, 45, 58);
+    margin-bottom : 10px;
   }
 
 
@@ -278,21 +324,19 @@
   }
 
 
-  .top-bar-search-button img{
-    width : 20px;
-    height : 20px;
-    margin-top : 2px;
-  }
-
   .top-bar-mobile-links-div{
     display : inline-block;
     width : 100%;
-    border-bottom : 1px solid rgb(52,152,219);
-    margin-bottom : 0px;
+    border : none;
+    margin: 0px;
+    padding 0px;
+    background-color : rgb(189,195,199);
   }
 
   .top-bar-mobile-links{
-    width : 24.5%;
+    background-color : rgb(189,195,199);
+    color : rgb(31, 45, 58);
+    width : 25.0%;
     height : 100%;
     float : left;
     text-align : center;
@@ -300,7 +344,6 @@
     font-size : 20px;
     padding-top : 10px;
     padding-bottom : 10px;
-    border-right : 1px solid rgb(52,152,219);
     cursor : pointer;
   }
 

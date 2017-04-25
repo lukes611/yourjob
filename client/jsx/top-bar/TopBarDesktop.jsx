@@ -11,8 +11,7 @@ class TopBarDesktop extends React.Component{
           <img className="top-bar-1-img" src="ims/logo.png"></img>
           <MenuToggler toggleMenu={this.props.toggleMenu} />
         </div>
-        <MobileLaunchBar changeDisplay={this.props.changeDisplay} selectedMenuItem={this.props.selectedMenuItem} />
-        <SearchBar search={this.props.search} />
+        <MobileLaunchBar changeDisplay={this.props.changeDisplay} selectedMenuItem={this.props.selectedMenuItem} /><SearchBar search={this.props.search} />
         <div className="top-bar-3">
           <button className="top-bar-sign-in-button" >sign-in</button>
         </div>
