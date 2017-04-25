@@ -1,0 +1,28 @@
+
+.app-body-menu{
+  border : none;
+  background-color : rgb(243,156,18);
+  position : absolute;
+  top : 120px;
+  left : 0px;
+  width : 220px;
+  padding-top : 20px;
+  height : calc(100vh - 120px);
+}
+
+.desktop-menu-item{
+  color : rgb(236,240,241);
+  width : calc(0.8 * 220px - 20px);
+  margin-left : calc(0.1 * 220px);
+  font-family : Ubuntu;
+  font-size : 26px;
+  padding-top : 5px;
+  padding-bottom : 5px;
+  padding-left : 20px;
+}
+
+.desktop-menu-item:hover{
+  background-color : rgb(236,240,241);
+  color : rgb(243,156,18);
+  cursor : pointer;
+}

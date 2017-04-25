@@ -11,8 +11,8 @@ export default class MenuItem extends React.Component{
     let style = {};
     if(this.isSelected()){
       style={
-        backgroundColor : 'rgb(52,73,94)',
-        color : 'rgb(52,152,219)'
+        backgroundColor : 'rgb(192,57,43)',
+        color : 'rgb(236,240,241)'
       };
     }
 

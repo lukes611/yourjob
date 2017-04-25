@@ -1,11 +1,11 @@
 
 .app-body{
   width : 100%;
-  margin-top : 60px;
+  margin-top : 5px;
 }
 
 .app-body-contents{
-  background-color : rgb(31, 45, 58);
+  background-color : rgb(236,240,241);
   width : 1024px;
   margin-left : calc((100% - 1024px) / 2);
   display : inline-block;
@@ -24,7 +24,7 @@
 }
 
 .app-body-para{
-  color : rgb(52,152,219);
+  color : rgb(41,128,185);
   width : calc(100% - 80px);
   font-family : Ubuntu;
   margin-left : 40px;
@@ -45,7 +45,7 @@
 
 .app-body-video-info-title{
   font-family : Ubuntu;
-  color : rgb(52,152,219);
+  color : rgb(41,128,185);
   font-size : 16px;
 }
 
@@ -63,14 +63,15 @@
 
 .app-body-title{
   width : calc(100% - 20px);
-  color : rgb(52,152,219);
+  color : rgb(236,240,241);
+  background-color : rgb(41,128,185);
   display : inline-block;
   font-family : Ubuntu;
   font-size : 26px;
   padding-top : 10px;
   padding-bottom : 10px;
   margin-bottom : 10px;
-  border-bottom : 1px solid rgb(52,152,219);
+  border : none;
   padding-left : 20px;
 }
 
@@ -91,9 +92,11 @@
 /*for mobile*/
 @media (max-width: 600px){
 
+  body{
+    background-color : rgb(236,240,241);
+  }
   .app-body{
-    margin-top : 0px;
-    background-color : rgb(31, 45, 58);
+    background-color : rgb(236,240,241);
   }
 
   .app-body-contents{
@@ -105,6 +108,7 @@
     width:90%;
     height:88%;
     padding : 5%;
+    margin-top : 40px;
     float : left;
   }
 
