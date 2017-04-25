@@ -29,12 +29,12 @@
   border : none;
   border-radius : 4px;
   color : rgb(236,240,241);
-  margin-top : 15px;
   width : 100%;
   cursor : pointer;
   font-size : 20px;
   margin-top : 26px;
 }
+
 .top-bar-menu-button:hover{
   background-color : rgb(241,196,15);
 }
@@ -53,16 +53,8 @@
   margin-left : calc((100% - 700px) / 2);
   height : 100%;
   background-color : rgb(41,128,185);
-
 }
 
-
-.top-bar-3{
-  width : 100px;
-  height : 100%;
-  float : left;
-  background-color : rgb(41,128,185);
-}
 
 .job-title-search-area{
   width : 300px;
@@ -75,6 +67,14 @@
   height : 100%;
   float : left;
 }
+
+.top-bar-3{
+  width : 100px;
+  height : 100%;
+  float : left;
+  background-color : rgb(41,128,185);
+}
+
 
 
 
@@ -132,15 +132,10 @@
 }
 
 
-
-
-
-
-
-
 .top-bar-search-guess{
-  background-color : rgb(31, 45, 58);
-  width : 72%;
+  background-color : rgb(41,128,185);
+  color : rgb(236,240,241);
+  width : 98%;
   display : none;
 
 }
@@ -169,13 +164,74 @@
 }
 
 .top-bar-search-guess-item:hover{
-  background-color : rgb(52,152,219);
-  color : rgb(31, 45, 58);
+  background-color : rgb(236,240,241);
+  color : rgb(41,128,185);
+
 
 }
 
 
 .top-bar-mobile-links-div{ display : none; }
+
+
+/*near a tablet size*/
+@media (max-width: 950px){
+
+  .top-bar{
+    height : 220px;
+    border: none;
+  }
+
+  .top-bar-2-sub{
+    width : 400px;
+    margin-left : calc((100% - 400px) / 2);
+    height : calc(100% - 40px);
+    margin-top : 40px;
+  }
+
+  .job-title-search-area{
+    width : 400px;
+    height : auto;
+    clear : both;
+  }
+
+  .job-location-search-area{
+    width : 400px;
+    height : auto;
+    clear : both;
+  }
+
+  .job-location-search-area-label{
+    margin-top : 5px;
+  }
+
+  .job-search-button-container{
+    clear : both;
+    width : 100%;
+    height : auto;
+  }
+
+  .top-bar-search-button{
+    margin-top : 5px;
+    margin-left : 302px;
+  }
+
+  .top-bar-1-img{
+    margin-top : 105px;
+  }
+
+  .top-bar-menu-button{
+    margin-top : 60px;
+  }
+
+  .top-bar-sign-in-button{
+    margin-top : 105px;
+  }
+
+
+
+
+}
 
 @media (max-width: 600px){
   .top-bar-1, .top-bar-3{

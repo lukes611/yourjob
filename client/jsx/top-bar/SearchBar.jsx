@@ -26,6 +26,9 @@ class SearchBar extends React.Component{
               your-job
             </div>
             <input type="text" value={this.state.entry} onFocus={this.focusInput.bind(this,true)} onBlur={this.focusInput.bind(this,false)} className="top-bar-search-bar" placeholder="Job Title" onChange={this.updateEntry.bind(this)}></input>
+            <div className="top-bar-search-guess" style={{display : drawGuesses ? 'block' : 'none'}}>
+              {guesses.map((g,i) => <div onClick={this.doSearch.bind(this, g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
+            </div>
           </div>
           <div className="job-location-search-area">
             <div className="job-location-search-area-label">
@@ -41,9 +44,6 @@ class SearchBar extends React.Component{
         </div>
       </div>
     );
-    /*<div className="top-bar-search-guess" style={{display : drawGuesses ? 'block' : 'none'}}>
-      {guesses.map((g,i) => <div onClick={this.doSearch.bind(this, g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
-    </div>*/
   }
 
   focusInput(focus){
