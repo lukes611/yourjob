@@ -8,10 +8,8 @@ class TopBarDesktop extends React.Component{
     return (
       <div className="top-bar">
         <div className="top-bar-1">
+          <img className="top-bar-1-img" src="ims/logo.png"></img>
           <MenuToggler toggleMenu={this.props.toggleMenu} />
-          <button className="top-bar-your-job-button">
-            your-job
-          </button>
         </div>
         <MobileLaunchBar changeDisplay={this.props.changeDisplay} selectedMenuItem={this.props.selectedMenuItem} />
         <SearchBar search={this.props.search} />

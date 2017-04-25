@@ -21,16 +21,29 @@ class SearchBar extends React.Component{
     return (
       <div className="top-bar-2">
         <div className="top-bar-2-sub">
-          <input type="text" value={this.state.entry} onFocus={this.focusInput.bind(this,true)} onBlur={this.focusInput.bind(this,false)} className="top-bar-search-bar" placeholder="Search" onChange={this.updateEntry.bind(this)}></input>
-          <button className="top-bar-search-button" onClick={this.doSearch.bind(this,this.state.entry)}>
-            <img src="ims/search-icon.png"></img>
-          </button>
-          <div className="top-bar-search-guess" style={{display : drawGuesses ? 'block' : 'none'}}>
-            {guesses.map((g,i) => <div onClick={this.doSearch.bind(this, g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
+          <div className="job-title-search-area">
+            <div className="job-location-search-area-label">
+              your-job
+            </div>
+            <input type="text" value={this.state.entry} onFocus={this.focusInput.bind(this,true)} onBlur={this.focusInput.bind(this,false)} className="top-bar-search-bar" placeholder="Job Title" onChange={this.updateEntry.bind(this)}></input>
+          </div>
+          <div className="job-location-search-area">
+            <div className="job-location-search-area-label">
+              your-location:
+            </div>
+            <input type="text" value={this.state.entry} onFocus={this.focusInput.bind(this,true)} onBlur={this.focusInput.bind(this,false)} className="top-bar-search-bar" placeholder="Location" onChange={this.updateEntry.bind(this)}></input>
+          </div>
+          <div className="job-search-button-container">
+            <button className="top-bar-search-button" onClick={this.doSearch.bind(this,this.state.entry)}>
+              Your-Job
+            </button>
           </div>
         </div>
       </div>
     );
+    /*<div className="top-bar-search-guess" style={{display : drawGuesses ? 'block' : 'none'}}>
+      {guesses.map((g,i) => <div onClick={this.doSearch.bind(this, g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
+    </div>*/
   }
 
   focusInput(focus){

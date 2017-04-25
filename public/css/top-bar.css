@@ -6,43 +6,118 @@
   top : 0px;
   left : 0px;
   width : 100vw;
-  height : 55px;
-  border-bottom : 1px solid rgb(52,152,219);
+  height : 120px;
+  border: none;
 }
 
 .top-bar-1{
-  width : 150px;
+  width : 100px;
   height : 100%;
   display : inline-block;
   float : left;
+  background-color : rgb(41,128,185);
 }
 
-.top-bar-2{
-  width : calc(100% - (150px + 120px));
-  height : 100%;
-  float : left;
-  display : inline-block;
-}
-
-.top-bar-3{
-  width : 120px;
-  height : 100%;
-  float : left;
+.top-bar-1-img{
+  width : 86%;
+  margin-left : 5%;
+  margin-top : 40px;
 }
 
 .top-bar-menu-button{
-  background-color : rgb(31, 45, 58);
-  border : 1px solid rgb(52,152,219);
-  color : rgb(41,128,185);
+  background-color : rgb(243,156,18);
+  border : none;
+  border-radius : 4px;
+  color : rgb(236,240,241);
   margin-top : 15px;
+  width : 100%;
   cursor : pointer;
+  font-size : 20px;
+  margin-top : 26px;
 }
 .top-bar-menu-button:hover{
-  background-color : rgb(52,152,219);
-  border : 1px solid rgb(31, 45, 58);
-  color : rgb(31, 45, 58);
+  background-color : rgb(241,196,15);
 }
 
+
+.top-bar-2{
+  width : calc(100% - (100px + 100px));
+  height : 100%;
+  float : left;
+  display : inline-block;
+  background-color : rgb(41,128,185);
+}
+
+.top-bar-2-sub{
+  width : 700px;
+  margin-left : calc((100% - 700px) / 2);
+  height : 100%;
+  background-color : rgb(41,128,185);
+
+}
+
+
+.top-bar-3{
+  width : 100px;
+  height : 100%;
+  float : left;
+  background-color : rgb(41,128,185);
+}
+
+.job-title-search-area{
+  width : 300px;
+  height : 100%;
+  float : left;
+}
+
+.job-location-search-area{
+  width : 300px;
+  height : 100%;
+  float : left;
+}
+
+
+
+
+.job-search-button-container{
+  float : left;
+  width : 10%;
+  height : 100%;
+}
+
+.job-location-search-area-label{
+  margin-top : 20px;
+  margin-left : 5px;
+  font-size : 16px;
+  margin-bottom : 6px;
+  font-family : Ubuntu;
+  color : rgb(236,240,241);
+}
+
+
+.top-bar-search-bar{
+  border : none;
+  background-color : rgb(236,240,241);
+  color : rgb(31, 45, 58);
+  font-size : 20px;
+  padding : 2px;
+  padding-left : 10px;
+  height : 32px;
+  width : 95.0%;
+  float : left;
+  border-radius : 4px;
+}
+.top-bar-search-button{
+  background-color : rgb(192,57,43);
+  color : rgb(236,240,241);
+  height : 37px;
+  cursor : pointer;
+  width : 90px;
+  margin-top : 44px;
+  border : none;
+  border-radius : 4px;
+  font-size : 16px;
+}
 
 .top-bar-your-job-button{
   margin-left : 10px;
@@ -56,29 +131,12 @@
 
 }
 
-.top-bar-2-sub{
-  width : 80%;
-  height : 38px;
-  margin-top : 12px;
-  margin-left : 10%;
-}
-.top-bar-search-bar{
-  border : 1px solid rgb(189,195,199);
-  background-color : rgb(44,62,80);
-  color : rgb(52,152,219);
-  font-size : 20px;
-  height : 24px;
-  width : 72%;
-  float : left;
-}
 
-.top-bar-search-button{
-  background-color : rgb(44,62,80);
-  height : 28px;
-  cursor : pointer;
-  width : 70px;
-  border : 1px solid rgb(189,195,199);
-}
+
+
+
+
+
 
 .top-bar-search-guess{
   background-color : rgb(31, 45, 58);
@@ -95,11 +153,13 @@
 }
 
 .top-bar-sign-in-button{
-  background-color : rgb(31, 45, 58);
-  border : 1px solid rgb(52,152,219);
-  color : rgb(52,152,219);
+  background-color : rgb(243,156,18);
+  border : none;
+  border-radius : 4px;
+  font-size : 20px;
+  color : rgb(236,240,241);
   padding : 5px;
-  margin-top : 15px;
+  margin-top : 46px;
 }
 
 .top-bar-search-guess-item{
@@ -137,13 +197,6 @@
     display : block;
   }
 
-  .top-bar-2-sub{
-    width : 100%;
-    height : auto;
-    margin-top : 5px;
-    margin-left : 0px;
-    display :inline-block;
-  }
 
   .top-bar-search-bar{
     font-size : 32px;
