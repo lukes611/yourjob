@@ -3,11 +3,19 @@
   border : none;
   background-color : rgb(243,156,18);
   position : absolute;
+  z-index : 11;
   top : 120px;
   left : 0px;
   width : 220px;
   padding-top : 20px;
   height : calc(100vh - 120px);
+}
+
+@media (max-width: 950px){
+  .app-body-menu{
+    top : 220px;
+    height : calc(100vh - 220px);
+  }
 }
 
 .desktop-menu-item{
