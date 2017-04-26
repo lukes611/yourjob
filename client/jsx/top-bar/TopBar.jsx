@@ -24,7 +24,7 @@ export default class TopBar extends React.Component{
     let menuStyle = {
       display : this.state.displayMenu ? 'block' : 'none'
     };
-    let menuList = 'Home,Info,Contact Us'.split(',');
+    let menuList = 'Home,About,YourPhilosophy,Contact Us'.split(',');
 
     return (
       <div>

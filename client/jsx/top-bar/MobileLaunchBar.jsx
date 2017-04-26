@@ -3,7 +3,7 @@ import React from 'react';
 export default class MobileLaunchBar extends React.Component{
 
   render(){
-    let menuItemNames = 'Home,Jobs,Info,Profile'.split(',');
+    let menuItemNames = 'Home,Jobs,About,Profile'.split(',');
     return (<div className="top-bar-mobile-links-div">
         {menuItemNames.map((name, index) => {
             let style = {};
