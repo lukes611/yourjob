@@ -33,14 +33,14 @@ export default class AppBody extends React.Component{
     page.content = this.state.content[page.title];
     page.show = page.content !== undefined;
 
-    
+
     return (
       <div className="app-body">
         <div className="app-body-contents">
           <BlockMessage page={page} />
 
           <div className="app-body-title">
-            Reccomended Jobs
+            Featured Jobs
           </div>
           {this.state.videos.map((video,i) => <VideoDisplay key={i} video={video}/>)}
         </div>
