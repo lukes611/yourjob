@@ -5,19 +5,34 @@ class SearchBar extends React.Component{
   constructor(props){
     super(props);
 
-    this.state = {
-      entry : '',
-      suggestions : [],
-      focussed : false
+    this._state = {
+      what : {entry : '', focussed : false, suggestions : []},
+      where : {entry : '', focussed : false, suggestions : []}
     };
+    this.state = Object.assign({}, this._state, {occupations : [],locations : ['Brisbane', 'Sydney']});
+  }
+
+  componentDidMount(){
+    $.get('/occupations', (data) =>{
+      this.setState(Object.assign({}, this.state, {occupations : data.occupations}));
+    });
+  }
+
+  sync(){
+    this.setState(Object.assign({}, this.state, this._state));
   }
 
   render(){
 
+    let what = this.state.what;
+    let where = this.state.where;
 
-    let guesses = this.state.suggestions;
-    let drawGuesses = this.state.suggestions.length > 0 && this.state.focussed;
+    let showWhatSuggestions = what.suggestions.length > 0 && what.focussed;
+    let showWhereSuggestions = where.suggestions.length > 0 && where.focussed;
 
+
+    let displayCSS = {display : 'block'};
+    let noDisplayCSS = {display : 'none'};
     return (
       <div className="top-bar-2">
         <div className="top-bar-2-sub">
@@ -25,19 +40,22 @@ class SearchBar extends React.Component{
             <div className="job-location-search-area-label">
               your-job
             </div>
-            <input type="text" value={this.state.entry} onFocus={this.focusInput.bind(this,true)} onBlur={this.focusInput.bind(this,false)} className="top-bar-search-bar" placeholder="Job Title" onChange={this.updateEntry.bind(this)}></input>
-            <div className="top-bar-search-guess" style={{display : drawGuesses ? 'block' : 'none'}}>
-              {guesses.map((g,i) => <div onClick={this.doSearch.bind(this, g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
+            <input type="text" value={what.entry} onFocus={this.focusInput.bind(this,'what', true)} onBlur={this.focusInput.bind(this,'what', false)} className="top-bar-search-bar" placeholder="Job Title" onChange={this.updateEntry.bind(this, 'what')}></input>
+            <div className="top-bar-search-guess" style={showWhatSuggestions ? displayCSS : noDisplayCSS}>
+              {what.suggestions.map((g,i) => <div onClick={this.setEntry.bind(this, 'what', g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
             </div>
           </div>
           <div className="job-location-search-area">
             <div className="job-location-search-area-label">
               your-location:
             </div>
-            <input type="text" value={this.state.entry} onFocus={this.focusInput.bind(this,true)} onBlur={this.focusInput.bind(this,false)} className="top-bar-search-bar" placeholder="Location" onChange={this.updateEntry.bind(this)}></input>
+            <input type="text" value={where.entry} onFocus={this.focusInput.bind(this,'where', true)} onBlur={this.focusInput.bind(this,'where', false)} className="top-bar-search-bar" placeholder="Location" onChange={this.updateEntry.bind(this, 'where')}></input>
+            <div className="top-bar-search-guess" style={showWhereSuggestions ? displayCSS : noDisplayCSS}>
+              {where.suggestions.map((g,i) => <div onClick={this.setEntry.bind(this, 'where', g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
+            </div>
           </div>
           <div className="job-search-button-container">
-            <button className="top-bar-search-button" onClick={this.doSearch.bind(this,this.state.entry)}>
+            <button className="top-bar-search-button" onClick={this.doSearch.bind(this)}>
               Your-Job
             </button>
           </div>
@@ -46,30 +64,43 @@ class SearchBar extends React.Component{
     );
   }
 
-  focusInput(focus){
-    setTimeout(() => this.setState(Object.assign({}, this.state, {focussed:focus})), 100);
+  focusInput(type, focus){
+    this._state[type].focussed = focus;
+    setTimeout(() => this.sync(), 200);
   }
 
-  doSearch(text){
+  doSearch(){
+    console.log('doing search...');
+    return 0;
     this.props.search(text);
     this.setState(Object.assign({}, this.state, {entry:text,suggestions:[],focussed:false}));
   }
 
-  updateEntry(e){
-    let value = e.target.value;
-    let newSuggestions = value.length > 0 ? this.state.suggestions : [];
+  setEntry(type, value){
+    this._state[type].entry = value;
+    this.sync();
+  }
 
-    this.setState(Object.assign({}, this.state, {entry:value, suggestions : newSuggestions}));
-    console.log('wow');
+  updateEntry(type, e){
+    let value = e.target.value;
+    let suggestions = [];
 
     if(value.length > 0){
-      $.get('/occupations', (data) =>{
-        let occupationList = data.occupations;
-        let newSuggestions = occupationList.filter((job) => job.toLowerCase().includes(value)).filter((x,y)=>y<10);
-        this.setState(Object.assign({}, this.state, {suggestions:newSuggestions}));
+      if(type == 'what') suggestions = this.state.occupations;
+      else suggestions = this.state.locations;
+
+      suggestions = suggestions.filter(function(job){
+        return job.toLowerCase().includes(value);
+      });
+      suggestions = suggestions.filter(function(x,y){
+        return y<10;
       });
     }
 
+
+    this._state[type].entry = value;
+    this._state[type].suggestions = suggestions;
+    this.sync();
   }
 
 }
