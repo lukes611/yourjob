@@ -21,12 +21,13 @@ class LogIn extends React.Component{
     if(!this.props.display) return null;
 
     return (
-      <div className="log-in-body">
+      <div className="sub-log-in-body">
         username : <br/>
         <input type="text" /> <br/>
         password : <br/>
         <input type="password" /> <br/>
-        remember me: <input type="checkbox" />
+        remember me: <input type="checkbox" /> <br/>
+      <button>log-in</button>
       </div>
     );
   }

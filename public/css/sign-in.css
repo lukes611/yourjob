@@ -53,3 +53,11 @@ body, .sign-in-app{
   border-top-right-radius : 20px;
   cursor : pointer;
 }
+
+
+/*log-in section*/
+
+.sub-log-in-body{
+  background-color : red;
+  display : inline-block;
+}
