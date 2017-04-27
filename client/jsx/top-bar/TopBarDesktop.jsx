@@ -13,10 +13,14 @@ class TopBarDesktop extends React.Component{
         </div>
         <MobileLaunchBar changeDisplay={this.props.changeDisplay} selectedMenuItem={this.props.selectedMenuItem} /><SearchBar search={this.props.search} />
         <div className="top-bar-3">
-          <button className="top-bar-sign-in-button" >sign-in</button>
+          <button className="top-bar-sign-in-button" onClick={this.gotoSignIn.bind(this)} >Profile</button>
         </div>
       </div>
   );
+  }
+
+  gotoSignIn(){
+    window.location.href = 'sign-in.html';
   }
 }
 

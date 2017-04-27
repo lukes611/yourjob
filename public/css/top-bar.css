@@ -164,6 +164,7 @@
   background-color : rgb(39,174,96);
   padding : 5px;
   margin-top : 46px;
+  cursor : pointer;
 }
 
 .top-bar-search-guess-item{

@@ -9,12 +9,19 @@ module.exports = function(grunt){
       }
     },
     browserify : {
-      dist : {
+      main : {
         options : {
           transform : [['babelify', {presets : ['es2015', 'react']}]]
         },
         src : ['client/jsx/index.jsx'],
         dest: 'public/javascript/index.js'
+      },
+      signIn : {
+        options : {
+          transform : [['babelify', {presets : ['es2015', 'react']}]]
+        },
+        src : ['client/jsx/sign-in.jsx'],
+        dest: 'public/javascript/sign-in.js'
       }
     }
   });
