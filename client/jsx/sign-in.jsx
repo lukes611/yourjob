@@ -22,12 +22,12 @@ class LogIn extends React.Component{
 
     return (
       <div className="sub-log-in-body">
-        username : <br/>
-        <input type="text" /> <br/>
-        password : <br/>
-        <input type="password" /> <br/>
-        remember me: <input type="checkbox" /> <br/>
-      <button>log-in</button>
+        <div className="sub-log-in-label">username: </div>
+        <input className="sub-log-in-input" type="text" />
+        <div className="sub-log-in-label">password: </div>
+        <input className="sub-log-in-input" type="password" /> <br/>
+        <div className="sub-log-in-label sub-log-in-label-remember-me" >remember me: <input className="sub-log-in-cb" type="checkbox" /> </div>
+        <button className="sub-log-in-button">log-in</button>
       </div>
     );
   }
@@ -59,8 +59,8 @@ class App extends React.Component{
 
     let signInOn = this.state.signInOn;
     let unselectedStyle = {
-      backgroundColor : 'rgb(41,128,185)',
-      color : 'rgb(236,240,241)'
+      backgroundColor : 'rgb(236,240,241)',
+      color : 'rgb(41,128,185)'
     };
 
     return (

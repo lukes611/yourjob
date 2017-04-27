@@ -10,7 +10,7 @@ body, .sign-in-app{
 }
 
 .sign-in-body{
-  background-color : rgb(236,240,241);
+  background-color : rgb(189,195,199);
   width : 100%;
 }
 
@@ -27,7 +27,7 @@ body, .sign-in-app{
 }
 
 .sign-in-loginButton{
-  background-color : rgb(192,57,43);
+  background-color : rgb(41,128,185);
   color : rgb(236,240,241);
   float : left;
   width : 50%;
@@ -41,7 +41,7 @@ body, .sign-in-app{
 }
 
 .sign-in-signUpButton{
-  background-color : rgb(192,57,43);
+  background-color : rgb(41,128,185);
   color : rgb(236,240,241);
   float : left;
   width : 50%;
@@ -58,6 +58,50 @@ body, .sign-in-app{
 /*log-in section*/
 
 .sub-log-in-body{
-  background-color : red;
+  background-color : rgb(236,240,241);
   display : inline-block;
+  width : calc(100% - 200px);
+  background-color : rgb(41,128,185);
+  padding-left : 200px;
+}
+
+.sub-log-in-label{
+  font-family : Ubuntu;
+  font-size : 26px;
+  margin-top : 20px;
+  color : rgb(236,240,241);
+}
+
+.sub-log-in-label-remember-me{
+  font-size : 20px;
+}
+
+.sub-log-in-input{
+  font-family : Ubuntu;
+  margin-top : 10px;
+  font-size : 26px;
+  border-radius : 10px;
+  border : none;
+  padding : 2px;
+  padding-left : 5px;
+}
+
+.sub-log-in-cb{
+  position : relative;
+  top : 2px;
+  left : 8px;
+}
+
+.sub-log-in-button{
+  background-color : brown;
+  width : 130px;
+  height : 45px;
+  margin-top : 15px;
+  font-family : Ubuntu;
+  font-size : 28px;
+  border-radius : 10px;
+  border : none;
+  margin-bottom : 20px;
+  margin-left : 215px;
+  color : rgb(236,240,241);
 }
