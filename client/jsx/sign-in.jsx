@@ -4,6 +4,18 @@ import TopBanner from './sign-in-components/TopBanner.jsx';
 import LogIn from './sign-in-components/LogIn.jsx';
 import SignInFormElement from './sign-in-components/SignInFormElement.jsx';
 
+/*
+click - register:
+: replies ok or not,
+click login : replies ok or not
+
+user
+id | user-name | salted-password | user-type[admin|user|company] | registered[true|false]
+
+
+
+*/
+
 
 
 class UserData extends React.Component{
