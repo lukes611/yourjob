@@ -1,11 +1,13 @@
 //server by luke lincoln
 var ContentRoutes = require('./server/ContentRoutes.js');
+var DB = require('./server/DB.js');
 var Cleanup = require('./server/Cleanup.js');
 var express = require('express');
 var fs = require('fs');
 var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('test.db');
-;
+var db = new DB(new sqlite3.Database('test.db'));
+
+
 
 Cleanup(function(){
   console.log('\nshutting down...');

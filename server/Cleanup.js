@@ -1,11 +1,5 @@
 
-var func = function(){
-  console.log('program complete...');
-};
-
 module.exports = function(cb){
-
-  func = cb;
 
   var cleanup = (function(){
     if(this.clean) return;
