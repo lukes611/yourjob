@@ -1,49 +1,83 @@
 import React from 'react';
 import {render} from 'react-dom';
+import TopBanner from './sign-in-components/TopBanner.jsx';
+import LogIn from './sign-in-components/LogIn.jsx';
+import SignInFormElement from './sign-in-components/SignInFormElement.jsx';
 
-class TopBanner extends React.Component{
+
+
+class UserData extends React.Component{
   render(){
-    let goHome = () => {
-      window.location.href = '/';
+    if(!this.props.display) return null;
+    return (
+      <div>
+        <SignInFormElement label="first-name" update={this.props.update}/>
+        <SignInFormElement label="last-name" update={this.props.update}/>
+        <SignInFormElement label="dob" type="date" update={this.props.update}/>
+      </div>
+    );
+  }
+}
+
+class CompanyData extends React.Component{
+  render(){
+    if(!this.props.display) return null;
+    return (
+      <div>
+        <SignInFormElement label="company name" update={this.props.update}/>
+      </div>
+    );
+  }
+}
+
+
+class SignUp extends React.Component{
+  constructor(p){
+    super(p);
+    this._state = {
+      user : {},
+      company : {}
+    };
+    this.state = Object.assign({}, this._state);
+  }
+
+  sync(){
+    this.setState(Object.assign({}, this._state));
+  }
+
+  render(){
+
+    if(!this.props.display) return null;
+    let update = this.updateValue.bind(this);
+    let updateUser = (name, value)=>{
+      this._state['user'][name] = value;
+      this.sync();
+    };
+    let updateCompany = (name, value)=>{
+      this._state['company'][name] = value;
+      this.sync();
     };
 
     return (
-      <div className="sign-in-top-bar">
-        <img src="ims/logo.png" onClick={goHome}></img>
-      </div>
-    );
-  }
-}
-
-class LogIn extends React.Component{
-  render(){
-
-    if(!this.props.display) return null;
-
-    return (
       <div className="sub-log-in-body">
-        <div className="sub-log-in-label">username: </div>
-        <input className="sub-log-in-input" type="text" />
-        <div className="sub-log-in-label">password: </div>
-        <input className="sub-log-in-input" type="password" /> <br/>
-        <div className="sub-log-in-label sub-log-in-label-remember-me" >remember me: <input className="sub-log-in-cb" type="checkbox" /> </div>
-        <button className="sub-log-in-button">log-in</button>
+        <SignInFormElement label="user name" update={update} />
+        <SignInFormElement label="email" update={update} />
+        <SignInFormElement label="password" type="password" update={update} />
+        <SignInFormElement label="confirm-password" type="password" update={update} />
+        <SignInFormElement name="isCompany" label="I am a company, advertising jobs" update={update} type="checkbox"/>
+        <UserData display={!this.state.isCompany} update={updateUser} />
+        <CompanyData display={this.state.isCompany} update={updateCompany} />
+        <button className="sub-log-in-button">register</button>
       </div>
     );
   }
-}
 
-class SignUp extends React.Component{
-  render(){
-
-    if(!this.props.display) return null;
-
-    return (
-      <div className="sign-up-body">
-        sign-up stuff
-      </div>
-    );
+  updateValue(name, value){
+    this._state[name] = value;
+    this.sync();
+    console.log(this._state);
   }
+
 }
 
 
@@ -51,7 +85,7 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      signInOn : true
+      signInOn : false
     };
   }
 
