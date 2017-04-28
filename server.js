@@ -8,6 +8,14 @@ var sqlite3 = require('sqlite3').verbose();
 var db = new DB(new sqlite3.Database('test.db'));
 
 
+db.getUser('admin', function(e, d){
+  //console.log(e,d);
+});
+
+db.createUser('joseph22', 'whale360', 'user', 'false', function(e){
+  console.log(e);
+});
+
 
 Cleanup(function(){
   console.log('\nshutting down...');
