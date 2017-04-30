@@ -20,7 +20,7 @@ module.exports = function(app){
   });
 
   app.get('/videos', function(req, res){
-    var videos = require('../dataAtServer/res/videos.json');
+    var videos = require('../dataAtServer/res/videos2.json');
     res.json(videos);
   });
 

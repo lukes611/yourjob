@@ -25,6 +25,10 @@ class App extends React.Component{
       <div>
         <TopBar changeDisplay={this.changeDisplay.bind(this)} selectedMenuItem={this.state.pageDisplay}/>
         <AppBody page={this.state.pageDisplay}/>
+        <div className="footer">
+          <div className="other-footer-content"></div>
+          <div className="footer-copyright">©YourJob2017</div>
+        </div>
       </div>
     );
   }

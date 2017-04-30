@@ -13,7 +13,7 @@ class VideoDisplay extends React.Component{
             {this.props.video.occupation}
           </a>
           <div className="app-body-video-info-other">
-            <a href="NULL">Coles</a><br/>
+            <a href="NULL">{this.props.video.industry}</a><br/>
             {this.props.video.views} views on {date}
           </div>
         </div>
