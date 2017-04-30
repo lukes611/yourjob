@@ -88,16 +88,6 @@
   height : 100%;
 }
 
-.job-location-search-area-label{
-  margin-top : 20px;
-  margin-left : 5px;
-  font-size : 16px;
-  margin-bottom : 6px;
-  font-family : Ubuntu;
-  color : rgb(236,240,241);
-}
-
-
 .top-bar-search-bar{
   border : none;
   background-color : rgb(236,240,241);
@@ -109,6 +99,7 @@
   width : 95.0%;
   float : left;
   border-radius : 4px;
+  margin-top : 44px;
 }
 .top-bar-search-button{
   background-color : rgb(192,57,43);
@@ -200,15 +191,16 @@
     clear : both;
   }
 
+  .top-bar-search-bar{
+    margin-top : 25px;
+  }
+
   .job-location-search-area{
     width : 400px;
     height : auto;
     clear : both;
   }
 
-  .job-location-search-area-label{
-    margin-top : 5px;
-  }
 
   .job-search-button-container{
     clear : both;

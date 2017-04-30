@@ -37,19 +37,13 @@ class SearchBar extends React.Component{
       <div className="top-bar-2">
         <div className="top-bar-2-sub">
           <div className="job-title-search-area">
-            <div className="job-location-search-area-label">
-              your-job
-            </div>
-            <input type="text" value={what.entry} onFocus={this.focusInput.bind(this,'what', true)} onBlur={this.focusInput.bind(this,'what', false)} className="top-bar-search-bar" placeholder="Job Title" onChange={this.updateEntry.bind(this, 'what')}></input>
+            <input type="text" value={what.entry} onFocus={this.focusInput.bind(this,'what', true)} onBlur={this.focusInput.bind(this,'what', false)} className="top-bar-search-bar" placeholder="What" onChange={this.updateEntry.bind(this, 'what')}></input>
             <div className="top-bar-search-guess" style={showWhatSuggestions ? displayCSS : noDisplayCSS}>
               {what.suggestions.map((g,i) => <div onClick={this.setEntry.bind(this, 'what', g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
             </div>
           </div>
           <div className="job-location-search-area">
-            <div className="job-location-search-area-label">
-              your-location:
-            </div>
-            <input type="text" value={where.entry} onFocus={this.focusInput.bind(this,'where', true)} onBlur={this.focusInput.bind(this,'where', false)} className="top-bar-search-bar" placeholder="Location" onChange={this.updateEntry.bind(this, 'where')}></input>
+            <input type="text" value={where.entry} onFocus={this.focusInput.bind(this,'where', true)} onBlur={this.focusInput.bind(this,'where', false)} className="top-bar-search-bar" placeholder="Where" onChange={this.updateEntry.bind(this, 'where')}></input>
             <div className="top-bar-search-guess" style={showWhereSuggestions ? displayCSS : noDisplayCSS}>
               {where.suggestions.map((g,i) => <div onClick={this.setEntry.bind(this, 'where', g)} className="top-bar-search-guess-item" key={i}>{g}</div>)}
             </div>
