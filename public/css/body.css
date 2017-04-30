@@ -15,9 +15,10 @@
 
 .app-body-video{
   width:180px;
-  height:160px;
+  height:200px;
   padding : 10px;
   float : left;
+  border-bottom : 1px solid rgb(170,170,170);
 }
 
 .app-body-block{
@@ -108,7 +109,8 @@
   }
   .app-body-video{
     width:90%;
-    height:88%;
+    height: 320px;
+    display : block;
     padding : 5%;
     margin-top : 40px;
     float : left;

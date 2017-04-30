@@ -68,6 +68,21 @@ DB.prototype.createUser = function(username, password, type, registered, cb){
   });
 };
 
+DB.prototype.verifyPassword = function(username, userEnteredPassword, cb){
+  var me = this;
+  me.getUser(username, function(err, data){
+    if(err){
+      cb(err, false);
+    }else{
+      Hasher(userEnteredPassword).verifyAgainst(data.password, function(err, verified){
+        if(err) cb('cannot verify', false);
+        else if(!verified) cb(null, false);
+        else cb(null, true);
+      });
+    }
+  });
+};
+
 
 DB.prototype.close = function(){
   this.db.close();

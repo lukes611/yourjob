@@ -56,7 +56,7 @@ class SearchBar extends React.Component{
           </div>
           <div className="job-search-button-container">
             <button className="top-bar-search-button" onClick={this.doSearch.bind(this)}>
-              Your-Job
+              search
             </button>
           </div>
         </div>
