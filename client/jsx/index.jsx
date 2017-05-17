@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import TopBar from './top-bar/TopBar.jsx';
+import TopBar from './presentation/TopBar.jsx';
 import AppBody from './AppBody.jsx';
 
 /*
